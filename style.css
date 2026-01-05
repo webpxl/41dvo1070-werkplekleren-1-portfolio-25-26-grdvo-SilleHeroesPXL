@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #fff3b0;
+    color: #335c67;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #e09f3e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    color: #9e2a2b;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    color: #9e2a2b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #9e2a2b;
+}
+
+/* ===========================
+   Main Sections
+=========================== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9e2a2b;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #e09f3e;
+}
+
+/* ===========================
+   Project Cards
+=========================== */
+.project {
+    background-color: #9e2a2b;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 5px solid #335c67;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border: 2px solid  #e09f3e;
+}
+
+
+footer {
+    background-color:  #335c67;
+    color: #e09f3e;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #e09f3e;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #9e2a2b;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.6rem;
+    }
+    section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
