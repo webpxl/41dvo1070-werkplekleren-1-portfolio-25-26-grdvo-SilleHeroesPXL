@@ -2,66 +2,85 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <title>Sille Heroes — Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sille Heroes Portfolio</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&family=Lora&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <h1>Sille Heroes</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="illustratie.html">Illustratie</a></li>
-            <li><a href="fotografie.html">Fotografi</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-    </nav>
-</header>
-
 <main>
-    <section id="intro">
-        <h2>Over mij</h2>
-        <p>
-            Ik ben <strong>Sille Heroes</strong>, 19 jaar en kom uit België.
-            Elke dag ben ik bezig met kunst en creativiteit. Ik teken graag, lees verhalen en hou van design met veel detail en verhaal.
-        </p>
+    <section class="fade-in delay-100">
+        <h1>Sille Heroes</h1>
+        <p>Creatieve student uit België</p>
     </section>
 
+    <section class="fade-in delay-200">
+        <a href="illustraties.html" class="btn">Bekijk werk</a>
+    </section>
 
-    <section id="projects">
-        <h2>Projecten</h2>
-        <div class="project">
-            <h3>Jungle in je Hoofd</h3>
-
-            <img src=".idea/assates/jungle in mijn hoofd.jpg" alt="jungle in je hoofd"/>
-            <p>Schoolproject: Illustratie met waterverf en zwart stift. Ik tekende mezelf omringd door boeken, een creatieve interpretatie van mijn gedachten.</p>
-        </div>
-        <div class="project">
-            <h3>DIY Kaarsen Workshop</h3>
-            <img src="placeholder-fotografie.jpg" alt="DIY Kaarsen Workshop">
-            <p>Stageproject bij ABoxx in Brussel. Ik fungeerde als fotograaf voor de workshop en legde de processen vast.</p>
-        </div>
-        <div class="project">
-            <h3>Berlijn Grafisch Design</h3>
-            <img src="placeholder-grafisch.jpg" alt="Berlijn Grafisch Design">
-            <p>Schoolproject: Grafisch ontwerp van kaartjes in Berlijn-stijl met telefoonnummers en adres van hotel. Mijn creativiteit en stijl kwamen volledig tot uiting.</p>
-        </div>
-        <div class="project">
-            <h3>Totem Website</h3>
-            <img src="placeholder-digital.jpg" alt="Totem Website">
-            <p>Schoolproject: Digitale website op Squarespace over mijn totemdier. Inclusief video van het eindresultaat.</p>
-        </div>
+    <section class="fade-in delay-300">
+        <img src="images/home-hero.jpg" alt="Creatief werk">
     </section>
 </main>
 
-<footer>
-    <p>&copy; 2026 Sille Heroes | <a href="privacy.html">Privacy-richtlijnen</a></p>
-</footer>
+<!-- Navigation -->
+<header class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="logo">Sille</a>
+        <nav>
+            <a href="illustraties.html">Illustraties</a>
+            <a href="fotografie.html">Fotografie</a>
+            <a href="design.html">Design</a>
+            <a href="portfolio.html">Over mij</a>
+        </nav>
+    </div>
+</header>
 
-<script src="script.js"></script>
+<!-- Hero -->
+<main>
+    <section class="hero">
+        <div class="hero-text">
+            <span class="subtitle">Welkom bij mijn portfolio</span>
+            <h1>Sille Heroes</h1>
+            <p class="tagline">Designer + creatieve denker</p>
+
+            <p class="intro">
+                19-jarige creatieve student uit België met een liefde voor kunst,
+                verhalen en kleine details.
+            </p>
+
+            <div class="buttons">
+                <a href="illustraties.html" class="btn">Bekijk mijn werk</a>
+                <a href="portfolio.html" class="btn">
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src=".idea/images/Ik.png" alt="Sille Heroes"/>
+            <p class="caption">~ mijn creatieve wereld ~</p>
+        </div>
+    </section>
+</main>
+<div class="hero-text">
+    <h1 class="fade-in delay-100">Sille Heroes</h1>
+    <p class="tagline fade-in delay-200">
+        Creatieve student met een liefde voor illustratie,
+        fotografie en design.
+    </p>
+
+    <div class="hero-buttons fade-in delay-300">
+        <a href="illustraties.html" class="btn">Bekijk werk</a>
+        <a href="portfolio.html" class="btn-outline">Over mij</a>
+    </div>
+</div>
+
+<div class="hero-image rotate-right fade-in delay-400">
+    <img src="images/home-hero.jpg" alt="Creatief werk van Sille">
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>

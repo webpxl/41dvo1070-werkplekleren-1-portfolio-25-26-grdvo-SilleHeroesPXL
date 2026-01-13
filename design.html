@@ -2,54 +2,69 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <title>Design — Sille Heroes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design - Sille Heroes</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <h1>Sille Heroes</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="illustratie.html">Illustratie</a></li>
-            <li><a href="fotografie.html">Fotografie</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
 
-        </ul>
-    </nav>
+<!-- Navigation -->
+<header class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="logo">Sille ✿</a>
+        <nav>
+            <a href="illustraties.html">Illustraties</a>
+            <a href="fotografie.html">Fotografie</a>
+            <a href="design.html" class="active">Design</a>
+            <a href="portfolio.html" class="btn">
+
+        </nav>
+    </div>
 </header>
 
-<main>
-    <section id="grafisch">
-        <h2>Grafisch Design</h2>
-        <article class="project">
-            <h3>Berlijn Grafisch Design</h3>
-            <img src="placeholder-grafisch.jpg" alt="Berlijn Grafisch Design">
-            <p>
-                Schoolproject: Grafisch ontwerp van kaartjes in Berlijn-stijl met telefoonnummers en adres van hotel. Mijn creativiteit en stijl kwamen volledig tot uiting.
-            </p>
-        </article>
+<main class="page">
+
+    <!-- Header -->
+    <section class="page-header">
+        <h1>Design</h1>
+        <p>Grafisch en digitaal design met oog voor detail en balans.</p>
     </section>
 
-    <section id="digital">
-        <h2>Digital Design</h2>
-        <article class="project">
-            <h3>Totem Website</h3>
-            <img src="placeholder-digital.jpg" alt="Totem Website">
-            <p>
-                Schoolproject: Digitale website op Squarespace over mijn totemdier. Inclusief video van mijn werkproces en eindresultaat.
-            </p>
+    <!-- Design grid -->
+    <section class="design-grid">
+
+        <article class="design-item">
+            <img src="images/design-1.jpg" alt="Editorial ontwerp">
+            <div class="design-info">
+                <h2>Editorial ontwerp</h2>
+                <p>Lay-out en typografie voor een creatief magazine.</p>
+                <span>Print Design</span>
+            </div>
         </article>
+
+        <article class="design-item">
+            <img src="images/design-2.jpg" alt="Branding concept">
+            <div class="design-info">
+                <h2>Branding concept</h2>
+                <p>Visuele identiteit met zachte kleuren en symboliek.</p>
+                <span>Branding</span>
+            </div>
+        </article>
+
+        <article class="design-item">
+            <img src="images/design-3.jpg" alt="Web design">
+            <div class="design-info">
+                <h2>Web design</h2>
+                <p>Minimalistisch webontwerp met focus op gebruikservaring.</p>
+                <span>Digital Design</span>
+            </div>
+        </article>
+
     </section>
+
 </main>
 
-<footer>
-    <p>&copy; 2026 Sille Heroes | <a href="privacy.html">Privacy-richtlijnen</a></p>
-</footer>
-<script src="script.js"></script>
 </body>
 </html>

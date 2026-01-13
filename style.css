@@ -1,139 +1,417 @@
+:root {
+    --bg: #f6f1eb;
+    --paper: #fffaf4;
+    --text: #3b3b3b;
+    --accent: #a38f7a;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Georgia', serif;
 }
 
 body {
-    background-color: #fff3b0;
-    color: #335c67;
+    font-family: "Lora", serif;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
 }
 
-header {
-    background-color: #e09f3e;
-    padding: 20px;
+/* Navigation */
+.nav {
+    background: var(--paper);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+}
+
+.nav-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-header .logo h1 {
-    font-size: 1.8rem;
-    color: #9e2a2b;
-    letter-spacing: 2px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-header nav ul li a {
-    color: #9e2a2b;
+.nav a {
+    margin-left: 1rem;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: var(--text);
+    font-weight: 500;
 }
 
-header nav ul li a:hover {
-    color: #9e2a2b;
+.logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.8rem;
 }
 
-/* ===========================
-   Main Sections
-=========================== */
-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 4rem 6rem;
+    align-items: center;
 }
 
-section {
-    margin-bottom: 60px;
+.subtitle {
+    font-style: italic;
+    opacity: 0.7;
 }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #9e2a2b;
-    display: inline-block;
-    padding-bottom: 5px;
+.hero h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    color: var(--accent);
 }
 
-section h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #e09f3e;
+.tagline {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
 }
 
-/* ===========================
-   Project Cards
-=========================== */
-.project {
-    background-color: #9e2a2b;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-left: 5px solid #335c67;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
+.intro {
+    margin: 1.5rem 0;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    border: 2px solid  #e09f3e;
+.buttons {
+    display: flex;
+    gap: 1rem;
 }
 
+.btn {
+    background: var(--accent);
+    color: white;
+    padding: 0.7rem 1.4rem;
+    text-decoration: none;
+    border-radius: 4px;
+}
 
-footer {
-    background-color:  #335c67;
-    color: #e09f3e;
+.btn.ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.hero-image img {
+    width: 100%;
+    background: var(--paper);
+    padding: 1rem;
+}
+
+.caption {
     text-align: center;
-    padding: 20px 0;
+    font-family: "Dancing Script", cursive;
+    margin-top: 0.5rem;
+    opacity: 0.7;
 }
 
-footer a {
-    color: #e09f3e;
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+/* Pages */
+.page {
+    padding: 3rem 6rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+}
+
+.page-header p {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
+
+/* Illustrations grid */
+.illustrations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+}
+
+/* Cards */
+.card {
+    background: var(--paper);
+    padding: 1rem 1rem 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px) rotate(0deg);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h2 {
+    margin-top: 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+}
+
+.category {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.card p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Rotations */
+.rotate-left {
+    transform: rotate(-2deg);
+}
+
+.rotate-right {
+    transform: rotate(2deg);
+}
+
+/* Washi tape */
+.tape {
+    width: 70px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    opacity: 0.9;
+}
+
+.tape.blue {
+    background: #cfdbe6;
+}
+
+.tape.beige {
+    background: #e7dccf;
+}
+
+/* Active nav */
+nav a.active {
     text-decoration: underline;
 }
 
-footer a:hover {
-    color: #9e2a2b;
-}
-
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
+/* Mobile */
+@media (max-width: 800px) {
+    .page {
+        padding: 2rem;
     }
 }
+/* Polaroid layout */
+.polaroids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+    justify-items: center;
+}
 
-@media (max-width: 480px) {
-    section h2 {
-        font-size: 1.6rem;
+/* Polaroid card */
+.polaroid {
+    background: #fff;
+    padding: 1rem 1rem 2.5rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    max-width: 240px;
+    transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+    transform: translateY(-6px) rotate(0deg);
+}
+
+.polaroid img {
+    width: 100%;
+    display: block;
+}
+
+.polaroid figcaption {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* reuse rotations */
+.rotate-left {
+    transform: rotate(-2deg);
+}
+
+.rotate-right {
+    transform: rotate(2deg);
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .polaroids {
+        gap: 2rem;
     }
-    section h3 {
-        font-size: 1.2rem;
+}
+/* Design grid */
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+/* Design item */
+.design-item {
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.design-item:hover {
+    transform: translateY(-6px);
+}
+
+.design-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Info */
+.design-info {
+    padding: 1.5rem;
+}
+
+.design-info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.design-info p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.design-info span {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .design-grid {
+        gap: 2rem;
+    }
+}
+/* About page */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Image */
+.about-image {
+    max-width: 320px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Text */
+.about-text h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.about-text .intro {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+/* List */
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.about-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Quote */
+.about-quote {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.about-quote p {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .about {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image {
+        margin: 0 auto;
+    }
+}
+/* Fade-in animatie keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-
+/* Class om te gebruiken */
 .fade-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
+    opacity: 0; /* start onzichtbaar */
+    @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+        opacity: 0;
+        animation: fadeInUp 1s forwards;
+    }
+
+    .fade-in.delay-100 { animation-delay: 0.1s; }
+    .fade-in.delay-200 { animation-delay: 0.2s; }
+    .fade-in.delay-300 { animation-delay: 0.3s; }
