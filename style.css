@@ -22,7 +22,7 @@ body {
 .nav {
     background: var(--paper);
     padding: 1rem 2rem;
-    position: sticky;
+    position: marker;
     top: 0;
 }
 
@@ -174,7 +174,7 @@ body {
     font-size: 0.95rem;
 }
 /* designs */
-/* Cards */
+
 .designs {
     background: var(--paper);
     padding: 1rem 1rem 1.5rem;
@@ -182,31 +182,30 @@ body {
     position: relative;
     transition: transform 0.3s ease;
 }
-
 .designs:hover {
     transform: translateY(-6px) rotate(0deg);
 }
-
 .designs img {
     max-width: 100%;
     height: auto;
     display: block;
+    padding: 1rem 1rem 1.5rem;
 }
-
 .designs h2 {
     margin-top: 1rem;
     font-family: "Playfair Display", serif;
     font-size: 1.4rem;
+    padding: 1rem 1rem 1.5rem;
 }
-
 .category {
     font-size: 0.85rem;
     opacity: 0.6;
+    padding: 1rem 1rem 1.5rem;
 }
-
 .designs p {
-    margin-top: 0.5rem;
+    margin-top: auto;
     font-size: 0.95rem;
+    padding: 1rem 1rem 1.5rem;
 }
 
 
@@ -398,3 +397,15 @@ nav a.active {
     .fade-in.delay-100 { animation-delay: 0.1s; }
     .fade-in.delay-200 { animation-delay: 0.2s; }
     .fade-in.delay-300 { animation-delay: 0.3s; }
+
+footer{
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: black;
+    isolation: auto;
+}
+
+
+
