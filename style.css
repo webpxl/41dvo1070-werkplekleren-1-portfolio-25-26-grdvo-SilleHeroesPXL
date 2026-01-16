@@ -173,6 +173,42 @@ body {
     margin-top: 0.5rem;
     font-size: 0.95rem;
 }
+/* designs */
+/* Cards */
+.designs {
+    background: var(--paper);
+    padding: 1rem 1rem 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.designs:hover {
+    transform: translateY(-6px) rotate(0deg);
+}
+
+.designs img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.designs h2 {
+    margin-top: 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+}
+
+.category {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.designs p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
 
 /* Rotations */
 .rotate-left {
